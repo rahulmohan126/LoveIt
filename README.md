@@ -7,3 +7,4 @@ This repository was forked because the orginal seems to be unmaintained since th
 - Added google analytics to "baseof.html"
 - Fixed config parsing for the "comment" section in "init.html"
 - Added custom commento server support in "comment.html" (add a string for the url tag in params.page.comment.commento, i.e. `url = "https://commento.mysite.com/js/commento.js"`)
+- Stackoverflow icon fixed in "social.yml"
