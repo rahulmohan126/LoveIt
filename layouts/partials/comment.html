@@ -105,7 +105,11 @@
         {{- $commento := $comment.commento | default dict -}}
         {{- if $commento.enable -}}
             <div id="commento"></div>
-            {{- dict "Source" "https://cdn.commento.io/js/commento.js" "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- if $commento.url -}}
+                {{- dict "Source" $commento.url "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- else -}}
+                {{- dict "Source" "https://cdn.commento.io/js/commento.js" "Defer" true | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- end -}}
             <noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://commento.io/">Commento</a>.
             </noscript>
